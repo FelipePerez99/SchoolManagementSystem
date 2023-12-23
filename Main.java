@@ -1,3 +1,9 @@
+import Entity.Curso;
+import Entity.Estudiante;
+import Excepcion.EstudianteNoInscritoEnCursoException;
+import Excepcion.EstudianteYaInscritoException;
+import Service.GestorAcademico;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -110,7 +116,7 @@ public class Main {
 
         try {
             gestor.inscribirEstudianteCurso(estudiante, idCurso);
-            System.out.println("Estudiante inscrito correctamente en el curso.");
+            System.out.println("Entity.Estudiante inscrito correctamente en el curso.");
         } catch (EstudianteYaInscritoException e) {
             System.out.println("Error: El estudiante ya está inscrito en el curso.");
         }
@@ -126,7 +132,7 @@ public class Main {
 
         try {
             gestor.desinscribirEstudianteCurso(idEstudiante, idCurso);
-            System.out.println("Estudiante desinscrito correctamente del curso.");
+            System.out.println("Entity.Estudiante desinscrito correctamente del curso.");
         } catch (EstudianteNoInscritoEnCursoException e) {
             System.out.println("Error: El estudiante no está inscrito en el curso o el ID del curso no es válido.");
         }

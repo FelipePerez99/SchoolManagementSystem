@@ -1,3 +1,5 @@
+package Entity;
+
 import java.util.Date;
 
 public class Estudiante extends Persona {

@@ -1,3 +1,10 @@
+package Service;
+
+import Entity.Curso;
+import Entity.Estudiante;
+import Excepcion.EstudianteNoInscritoEnCursoException;
+import Excepcion.EstudianteYaInscritoException;
+
 public interface ServiciosAcademicosI {
 
     void matriculaEstudiante(Estudiante estudiante);

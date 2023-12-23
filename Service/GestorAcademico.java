@@ -1,7 +1,14 @@
+package Service;
+
+import Entity.Curso;
+import Entity.Estudiante;
+import Excepcion.EstudianteNoInscritoEnCursoException;
+import Excepcion.EstudianteYaInscritoException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class GestorAcademico  implements ServiciosAcademicosI{
+public class GestorAcademico  implements ServiciosAcademicosI {
     private ArrayList<Estudiante> estudiantes = new ArrayList<>();
     private ArrayList<Curso> cursos = new ArrayList<>();
     private HashMap<Curso, ArrayList<Estudiante>> estudiantesPorCurso;
@@ -45,7 +52,7 @@ public class GestorAcademico  implements ServiciosAcademicosI{
 
     @Override
     public String toString() {
-        return "GestorAcademico{" +
+        return "Service.GestorAcademico{" +
                 "estudiantes=" + estudiantes +
                 ", cursos=" + cursos +
                 ", estudiantesPorCurso=" + estudiantesPorCurso +

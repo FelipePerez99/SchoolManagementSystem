@@ -1,3 +1,5 @@
+package Entity;
+
 import java.util.Date;
 
 public class Persona {
@@ -59,7 +61,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" +
+        return "Entity.Persona{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
