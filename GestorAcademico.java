@@ -7,6 +7,10 @@ public class GestorAcademico  implements ServiciosAcademicosI{
     private HashMap<Curso, ArrayList<Estudiante>> estudiantesPorCurso;
 
     public GestorAcademico(){
+        estudiantesPorCurso = new HashMap<>();
+        for (Curso curso : cursos) {
+            estudiantesPorCurso.put(curso, new ArrayList<>());
+        }
 
     }
     public GestorAcademico(ArrayList<Estudiante> estudiantes, ArrayList<Curso> cursos, HashMap<Curso, ArrayList<Estudiante>> estudiantesPorCurso) {
@@ -122,5 +126,4 @@ public class GestorAcademico  implements ServiciosAcademicosI{
             }
         }
     }
-
 }
